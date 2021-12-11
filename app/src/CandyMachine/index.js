@@ -114,9 +114,11 @@ const CandyMachine = ({ walletAddress }) => {
     console.log("TEST")
   }
 
+  /* eslint-disable */
   useEffect(() => {
     getCandyMachineState()
-  }, [])
+  }, []) 
+  /* eslint-enable */
 
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
