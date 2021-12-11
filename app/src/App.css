@@ -1,8 +1,15 @@
 .App {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
-  overflow: scroll;
+  background-image: url("./assets/background.jpg"); 
+  background-position: center;
   text-align: center;
+  overflow: hidden;
+}
+.ActivatedApp {
+  height: 100vh;
+  background-image: url("./assets/dos.jpg"); 
+  background-size:100%;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -34,9 +41,7 @@
   font-weight: bold;
 }
 
-.sub-text {
-  font-size: 25px;
-}
+
 
 .gradient-text {
   background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
@@ -47,28 +52,46 @@
 
 .cta-button {
   height: 45px;
-  border: 0;
-  width: auto;
-  padding-left: 40px;
+  border: 2;
+  border-color: white;
+  width:fit-content;
+  margin-left: 0;
   padding-right: 40px;
-  border-radius: 10px;
   cursor: pointer;
+  text-align: start;
   font-size: 16px;
   font-weight: bold;
+  color: -webkit-linear-gradient(white, #000000);
+  animation: gradient-animation 4s ease infinite;
 }
 
 .connect-wallet-button {
   color: white;
-  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  background: -webkit-linear-gradient(left, #262626, #101010);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .mint-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  color: white;
+  background: -webkit-linear-gradient(left, #262626, #101010);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
-  margin-left: 10px;
+}
+
+.mint-button:hover {
+  color: white;
+  background: -webkit-linear-gradient(left, #454545, #393939);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+.mint-button:disabled:hover {
+  background: lightgray;
+  cursor: not-allowed;
+}
+.mint-button:disabled {
+  background: lightgray
 }
 
 .footer-container {
